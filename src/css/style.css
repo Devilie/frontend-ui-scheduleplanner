@@ -5,8 +5,8 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, 
 	display: block;
 }
 body {
-    font-size: 100%;
-    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-family: "Lucida", Arial, Helvetica, sans-serif;
 	width: 100%;
 	height: 100%;
 }
@@ -20,6 +20,17 @@ body {
 a {
     text-decoration: none;
 }
+h1, h2, h3 
+{
+    color: #983904;
+}
+/*font-face*/
+@font-face {
+    font-family: "Lucida";
+    src: "font.ttf";
+    font-style: normal;
+    font-weight: 300;
+}
 
 
 /* Header
@@ -29,24 +40,120 @@ a {
 	background-image: url(../images/header-background.png);
     padding: 0 10px;
 }
-.main-menu .menu-list .menu-item a {
-    color: #cdcdcd;
+.mainmenu  .menu-item{
+	display: inline-block;
+    box-sizing: border-box;
+    margin: 10px 10px;
+    text-align: center;
+    white-space: nowrap;
 }
-.main-menu .menu-list .menu-item a:hover {
+.mainmenu .menu-list .menu-item a {
+    color: #cdcdcd; 
+    height: 10px;
+}
+.mainmenu .menu-list .menu-item a:hover {
     color: #1c2023;
     background-color: #cdcdcd;
+    border: 1px solid #cdcdcd;
+    border-radius: 10px; 
 }
-
 
 /* Middle
 -----------------------------------------------------------------------------*/
 .content {
-	padding: 10px 10px 200px;
+	padding: 0 0 200px;
     color: #3e3e3e;
+}
+.schedule-planner {
+    background-image: url(../images/shedule-planner-background.png);
+    /*position: relative;
+    height: 200px;*/
+}
+.schedule-planner .logo {
+    width: 42px;
+    height: 32px;
+}
+/*.schedule-planner img {
+    position: absolute;
+}*/
+.schedule-planner .logo img {
+    height: inherit;
+    width: auto;
+
+}
+.schedule-planner h1 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    background: -webkit-linear-gradient(#ae7258, #733321);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+}
+.schedule-planner .badge-img {
+    width: 66px;
+    height: 66px;
+}
+.schedule-planner .badge-img img {
+    width: auto;
+    height: inherit;
+}
+
+.application-integration {
+    background-color: #f8f7f3;
+    
+}
+
+.application-integration h2 {
+    color: #915542;
+}
+.integration {
+    position: relative;
+}
+.integration picture {
+    height: 72px;
+    width: 72px;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+.integration picture img {
+    height: inherit;
+    width: auto;
+}
+.integration p, h2{
+    margin-inline-start: 100px;
+}
+
+.features {
+    background-image: url(../images/features-background.png);
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.features .features-list {
+    padding: 10px;
+}
+.features .feature-icon {
+    width: 32px;
+    height: 32px;
+}
+.features-list .features-item span {
+    padding-left: 20px;
+}
+.feature-icon img {
+    width: auto;
+    height: inherit;
+}
+
+.feedbacks {
+    background-color: #f8f7f3;
 }
 
 
 
+.border-line-top{
+    background-image: 
+}
 
 /* Footer
 -----------------------------------------------------------------------------*/
@@ -54,6 +161,14 @@ a {
 	width: 320px;
 	margin: -200px auto 0;
 	height: 200px;
-	background: ;
+	background: #393939;
 	position: relative;
+    color: #c3c3c3; 
 }
+.footer h3, h2 {
+    color: #dbdbdb;
+}
+.footer div {
+    display: inline-block;
+}
+/*.footer .subscription*/
