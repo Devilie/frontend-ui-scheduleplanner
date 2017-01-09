@@ -1,93 +1,117 @@
 html {
 	height: 100%;
 }
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
-	display: block;
-}
 body {
     font-size: 16px;
-    font-family: "Lucida", Arial, Helvetica, sans-serif;
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
 	width: 100%;
 	height: 100%;
 }
 .wrapper {
-	width: 320px;
 	margin: 0 auto;
-	min-height: 100%;
-	height: auto !important;
-	height: 100%;
+}
+.content-wraper {
+	width: auto;
+	display: block;
+    max-width: 1000px;
+    margin: 0 20px;
 }
 a {
     text-decoration: none;
 }
-h1, h2, h3 
-{
-    color: #983904;
+li {
+    list-style: none;
 }
-/*font-face*/
+ul, h1, h2, h3 {
+    margin: 0 auto;
+}
 @font-face {
-    font-family: "Lucida";
-    src: "font.ttf";
+    font-family: 'Myriad Pro';
+    src: 
+        local('Myriad Pro Regular'),
+		  local('MyriadPro-Regular'),  
+        url('fonts/myriadpro-regular.woff') format('woff'), 
+        url('fonts/myriadpro-regular.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
-    font-weight: 300;
 }
 
+@font-face {
+    font-family: 'Myriad Pro';
+    src: 
+        local('Myriad Pro Bold'),
+		  local('MyriadPro-Bold'),
+        url('fonts/myriadpro-bold.woff') format('woff'), 
+        url('fonts/myriadpro-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
 
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
-	height: 40px;
+    width: auto;
 	background-image: url(../images/header-background.png);
-    padding: 0 10px;
 }
-.mainmenu  .menu-item{
-	display: inline-block;
-    box-sizing: border-box;
-    margin: 10px 10px;
+.mainmenu {
     text-align: center;
-    white-space: nowrap;
+}
+
+.mainmenu  .menu-item{
+	display: inline-block;    
 }
 .mainmenu .menu-list .menu-item a {
     color: #cdcdcd; 
-    height: 10px;
+    box-sizing: border-box;
+    display: inline-block;
+    height: 1.625rem;
+    border-radius: 10px;
+    margin: 0.6rem 0;
+    padding: 0.34rem 1.3rem;
 }
 .mainmenu .menu-list .menu-item a:hover {
     color: #1c2023;
-    background-color: #cdcdcd;
-    border: 1px solid #cdcdcd;
-    border-radius: 10px; 
+    background-color: #dbdbdb;
 }
 
 /* Middle
 -----------------------------------------------------------------------------*/
 .content {
-	padding: 0 0 200px;
+	padding: 0;
     color: #3e3e3e;
 }
 .schedule-planner {
     background-image: url(../images/shedule-planner-background.png);
-    /*position: relative;
-    height: 200px;*/
+    position: relative;
+    padding-top: 2.19rem;
+    text-align: center;
+    height: 200px;
 }
+
 .schedule-planner .logo {
     width: 42px;
     height: 32px;
 }
-/*.schedule-planner img {
+.schedule-planner img {
     position: absolute;
-}*/
+}
 .schedule-planner .logo img {
     height: inherit;
     width: auto;
-
+    top:0;
+    left: 0;
 }
-.schedule-planner h1 {
+h1 {
     font-size: 1.5rem;
-    font-weight: 600;
+    /*gradient*/
     background: -webkit-linear-gradient(#ae7258, #733321);
-    background-clip: text;
     -webkit-text-fill-color: transparent;
-    text-shadow: 2px 2px 3px rgba(255,255,255,0.1);
+    text-shadow: 3px 3px 5px rgba(189,134,112,0.2);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: rgba(189,134,112,0.9) 0px 3px 3px;
+
 }
 .schedule-planner .badge-img {
     width: 66px;
@@ -96,6 +120,8 @@ h1, h2, h3
 .schedule-planner .badge-img img {
     width: auto;
     height: inherit;
+    top: 0;
+    right: 0;
 }
 
 .application-integration {
@@ -128,47 +154,95 @@ h1, h2, h3
     background-image: url(../images/features-background.png);
     color: #fff;
     font-size: 1.5rem;
-    font-weight: 500;
 }
 .features .features-list {
-    padding: 10px;
+    padding: 15px;
+}
+.features .features-item {
+    text-align: left;
 }
 .features .feature-icon {
     width: 32px;
     height: 32px;
+    display: inline-block;
+    margin-right: 10px;
+    text-align: center;
+    line-height: 32px;
 }
 .features-list .features-item span {
     padding-left: 20px;
+    white-space: normal;
+    vertical-align: top;
+    display: inline-block;
+    width: 64%;
 }
 .feature-icon img {
     width: auto;
     height: inherit;
+    vertical-align: middle;
 }
 
 .feedbacks {
     background-color: #f8f7f3;
 }
-
-
-
-.border-line-top{
-    background-image: 
+.feedbacks h4 {
+    font-size: 
 }
+
 
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
-	width: 320px;
-	margin: -200px auto 0;
-	height: 200px;
+	margin: 0 auto;
 	background: #393939;
 	position: relative;
     color: #c3c3c3; 
+    /*text-align: center;*/
+    font-size: 12px;
 }
 .footer h3, h2 {
     color: #dbdbdb;
 }
 .footer div {
     display: inline-block;
+    vertical-align: top;
 }
-/*.footer .subscription*/
+.footer .subscribe-form {
+    
+    display: inline-block;
+}
+.footer .subscribe-form .label {
+    display: block;
+    margin-bottom: 5px; 
+}
+.footer .subscribe-form .mail-text {
+    background-color: #0d0d0d;
+    border: none;
+    height: 26px;
+    width: 134px;
+}
+.footer.subscribe-form .button-subscribe {
+    background-color: #20669b;
+    border-radius: 3px;
+    border: 1px solid #20669b;
+    height: 26px;
+}
+.copyright {
+    width: 100%;
+    text-align: center;
+    border-top: #2c2c2c  solid 1px;
+    box-shadow: 0 -1px 0 0 #4e4e4e;
+    padding: 5px 0 11px 0;
+}
+
+/* Media
+-----------------------------------------------------------------------------*/
+
+@media (min-width: 300px){
+
+}
+@media only screen and (min-width: 1000px) {
+    h1 {
+        font-size: 76.36pt;
+    }
+}

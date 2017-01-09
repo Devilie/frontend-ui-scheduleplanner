@@ -7,29 +7,31 @@
     <title>Schedule Planner | Organize and accomplish your daily plansSchedule Planner</title>
     <meta name="keywords" content="" />
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, 	maximum-scale=1.0, minimum-scale=1.0"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, maximum-scale=1.0, minimum-scale=1.0"
     />
-    <link href="css/reset.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/media.css">
 </head>
 
 <body>
 
     <div class="wrapper">
         <header class="header">
-            <nav class="mainmenu">
-                <ul class="menu-list">
-                    <li class="menu-item"><a href="#">Home</a></li>
-                    <li class="menu-item"><a href="#">Feature</a></li>
-                    <li class="menu-item"><a href="#">Support</a></li>
-                    <li class="menu-item"><a href="#">Blog</a></li>
-                </ul>
+            <div class="content-wraper">
+                <nav class="mainmenu">
+                    <ul class="menu-list">
+                        <li class="menu-item"><a href="#">Home</a></li>
+                        <li class="menu-item"><a href="#">Feature</a></li>
+                        <li class="menu-item"><a href="#">Support</a></li>
+                        <li class="menu-item"><a href="#">Blog</a></li>
+                    </ul>
+                </nav>
+            </div>
         </header>
         <!-- .header-->
 
         <main class="content">
-            <section class="schedule-planner">
+            <section class="schedule-planner .content-wraper">
                 <a href="#" class="logo"><img src="./images/logo.png" alt="Logo"></a>
                 <h1>Schedule Planner</h1>
                 <picture class="badge-img"><img src="./images/badge.png" alt="Badge"></picture>
@@ -48,11 +50,10 @@
                     </a>
                 </div>
             </section>
-            <div class="border-line-top"></div>
-            <section class="application-integration">
+            <section class="application-integration .content-wraper">
                 <div class="integration">
-                    <picture><img src="./images/calendar.png" alt="Calendar icon"></picture>
                     <h2>Google Calendar &amp; iCal integration</h2>
+                    <picture><img src="./images/calendar.png" alt="Calendar icon"></picture>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias vitae illum incidunt quasi, sint vero earum necessitatibus,
                         nesciunt repellendus fugit ipsa assumenda unde. Ratione, voluptatibus, nisi minima doloremque labore
@@ -60,8 +61,8 @@
                     </p>
                 </div>
                 <div class="integration">
-                    <picture><img src="./images/dropbox.png" alt="Dropbox icon"></picture>
                     <h2>Dropbox</h2>
+                    <picture><img src="./images/dropbox.png" alt="Dropbox icon"></picture>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit nisi voluptatem, accusamus dolor delectus culpa, atque perferendis
                         assumenda, quasi id architecto eligendi voluptatibus dicta hic, odio repellendus provident deserunt
@@ -69,8 +70,8 @@
                     </p>
                 </div>
                 <div class="integration">
-                    <picture><img src="./images/charts.png" alt="Charts icon"></picture>
                     <h2>Charts</h2>
+                    <picture><img src="./images/charts.png" alt="Charts icon"></picture>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime nisi, aliquid distinctio nihil ducimus cumque doloribus
                         sit minima nesciunt necessitatibus in adipisci, repellat, consequatur vel inventore quis ipsam tempore
@@ -78,15 +79,15 @@
                     </p>
                 </div>
                 <div class="integration">
-                    <picture><img src="./images/p-a.png" alt="Planned vs Actual icon"></picture>
                     <h2>Planned vs Actual</h2>
+                    <picture><img src="./images/p-a.png" alt="Planned vs Actual icon"></picture>
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nemo, dolores, soluta! Error debitis possimus ipsam sequi sint,
                         saepe quibusdam odit fugit nulla id qui at dicta exercitationem excepturi, cumque eaque.
                     </p>
                 </div>
             </section>
-            <section class="features">
+            <section class="features .content-wraper">
                 <ul class="features-list">
                     <li class="features-item">
                         <picture class="feature-icon">
@@ -114,7 +115,7 @@
                     </li>
                 </ul>
             </section>
-            <section class="feedbacks">
+            <section class="feedbacks .content-wraper">
                 <div class="feedback">
                     <q>“A fantastic planner for the iPad. Its very useful sorting features and easy to use interface make it a real business-minded option for time management on iOS.”</q>
                     <h3>AppAdvice.com</h3>
@@ -128,7 +129,7 @@
                     <h3>ipadappsreviewer.com</h3>
                 </div>
             </section>
-            <div class="border-line-bottom"></div>
+            <a href="#" class="read-more-link">Read More</a>
         </main>
         <!-- .content -->
 
@@ -136,50 +137,48 @@
     <!-- .wrapper -->
 
     <footer class="footer">
-        <div class="social-links">
-            <h3> Connect</h3>
-            <a href="mailto:support@digi117.com" target="_blank">
-                <div class="social-link">
-                    <img src="./images/mail.png" alt="Mail">
-                </div>
-            </a>
-            <a href="https://twitter.com" target="_blank">
-                <div class="social-link">
-                    <img src="./images/twitter.png" alt="Twitter">
-                </div>
-            </a>
-            <a href="https://www.facebook.com" target="_blank">
-                <div class="social-link">
-                    <img src="./images/facebook.png" alt="Facebook">
-                </div>
-            </a>
-            <a href="https://www.linkedin.com" target="_blank">
-                <div class="social-link">
-                    <img src="./images/in.png" alt="Linkedin">
-                </div>
-            </a>
-        </div>
-        <form class="subscription" method="get">
-            <span>Subscribe to receive INTERSOG updates</span>
-            <div>
-                <input class="mail-text">
-                <input type="button" value="Subscribe" class="button-subscribe">
+        <div class="content-wraper">
+            <div class="social-links">
+                <h2> Connect</h2>
+                <ul class="link-list">
+                    <li class="social-link">
+                        <a href="mailto:support@digi117.com" class="mail">E-mail</a>
+                    </li>
+                    <li class="social-link">
+                        <a href="https://twitter.com" class="Twitter">Twitter</a>
+                    </li>
+                    <li class="social-link">
+                        <a href="https://www.facebook.com" class="Facebook">Facebook</a>
+                    </li>
+                    <li class="social-link">
+                        <a href="https://www.linkedin.com" class="Linkedin">Linkedin</a>
+                    </li>
+                </ul>
+
             </div>
-        </form>
-        <div class="partners">
-            <h2>Our partners:</h2>
-            <ul class="partners-links">
-                <li class="link">
-                    <a class="comboapp-link" href=""><img src="./images/comboapp.png" alt="ComboApp"></a>
-                </li>
-                <li class="link">
-                    <a class="digi-link" href=""><img src="./images/digi.png" alt="DIGI117"></a>
-                </li>
+            <form class="subscription">
+                <label class="label">Subscribe to receive INTERSOG updates</label>
+                <div class="subscribe-form">
+                    <input type="email" class="mail-text" />
+                    <button type="submit" class="button-subscribe">Subscribe</button>
+                </div>
+            </form>
+            <div class="partners">
+                <h2>Our partners:</h2>
+                <ul class="partners-links">
+                    <li class="link">
+                        <a href=""><img src="./images/comboapp.png" alt="ComboApp"></a>
+                    </li>
+                    <li class="link">
+                        <a href=""><img src="./images/digi.png" alt="DIGI117"></a>
+                    </li>
 
-            </ul>
+                </ul>
 
 
+            </div>
         </div>
+        <div class="copyright">&copy; INTERSOG 2005-2012</div>
     </footer>
     <!-- .footer -->
 
