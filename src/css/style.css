@@ -44,14 +44,16 @@ body {
 a {
     text-decoration: none;
 }
-li {
+ul {
     list-style: none;
+    padding: 0;
 }
 ul, h1, h2, h3 {
     margin: 0 auto;
 }
 h1 {
-    font-size: 28px;
+    font-size: 26px;
+    padding-left: 32px;
     /*gradient and shadow*/
     background: -webkit-linear-gradient(#b37059, #522f21);
     -webkit-text-fill-color: transparent;
@@ -74,23 +76,27 @@ h2 {
 -----------------------------------------------------------------------------*/
 .header {
     width: auto;
+    padding: 8px 0;
 	background-image: url(../images/header-background.png);
 }
-.mainmenu {
-    text-align: center;
-}
+/*.mainmenu {
+}*/
 
+.mainmenu .menu-list {
+    text-align: center;
+    padding: 0;
+}
 .mainmenu  .menu-item{
-	display: inline-block;    
+	display: inline-block; 
+    vertical-align: top;   
 }
 .mainmenu .menu-list .menu-item a {
     color: #cdcdcd; 
     box-sizing: border-box;
-    display: inline-block;
-    height: 1.625rem;
+    display: block;
+    height: 20px;
     border-radius: 10px;
-    margin: 0.6rem 0;
-    padding: 0.34rem 1.3rem;
+    padding: 2px 15px;
 }
 .mainmenu .menu-list .menu-item a:hover {
     color: #1c2023;
@@ -108,9 +114,8 @@ h2 {
 .schedule-planner {
     background-image: url(../images/shedule-planner-background.png);
     position: relative;
-    padding-top: 2.19rem;
+    padding-top: 20px;
     text-align: center;
-    height: 200px;
 }
 
 .schedule-planner .logo {
@@ -123,7 +128,7 @@ h2 {
 .schedule-planner .logo img {
     height: inherit;
     width: auto;
-    top: 30px;
+    top: 15px;
     left: 10px;
 }
 .schedule-planner .badge-img {
@@ -136,12 +141,77 @@ h2 {
     top: 0;
     right: 0;
 }
+.platforms .platforms-menu {
+    display: block;
+    margin: 0;
+    padding:50px 0;
+}
+.platforms .platforms-menu .menu-item {
+    display: inline-block;
+    vertical-align: top;
+    padding: 0 10% 0 0;
+}
+.platforms .platforms-menu .menu-item:last-child {
+    padding-right: 0; 
+}
+.platforms .platforms-menu a{
+    position: relative;
+    display: block;
+    padding-top: 56px;
+    color: #32353a;
+}
+.platforms .platforms-menu a:hover{
+    color: #d65600;
+}
+.platforms .platforms-menu a::before {
+    content: "";
+    position: absolute;
+	top: 0;
+	left: 0;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	background: url(../images/bg_platforms.png) no-repeat;
+}
+
+.platforms .platforms-menu .iphone  a::before  {
+    width: 25px;
+	height: 42px;
+	background-position: -29px 0;
+}
+.platforms .platforms-menu .iphone a:hover::before{
+    background-position: -108px 0; 
+}
+.platforms .platforms-menu .ipad a::before{
+    width: 37px;
+    height: 49px;
+    background-position: -22px -44px;
+}
+.platforms .platforms-menu .ipad a:hover::before{
+    background-position: -101px -44px;
+}
+.platforms .platforms-menu .android a::before{
+    width: 41px;
+    height: 47px;
+    background-position: -23px -95px;
+}
+.platforms .platforms-menu .android a:hover::before{
+    background-position: -102px -95px;
+}
+.platforms .platforms-menu .kindle a::before{
+    width: 31px;
+    height: 45px;
+    background-position: -24px -143px;
+}
+.platforms .platforms-menu .kindle a:hover::before{
+    background-position: -103px -143px;
+}
+
 
 /* Application integration
 -----------------------------------------------------------------------------*/
 .application-integration {
     background-color: #f8f7f3;
-    
+    padding: 20px 0;
 }
 
 .application-integration h2 {
@@ -217,7 +287,12 @@ h2 {
 }
 .feedbacks .feedback {
     display: block;
-    
+    /*1000px viewport
+    display: inline-block;
+    max-width: 280px;
+    vertical-align: top;
+    margin-right: 40px; 
+    */
 }
 .feedbacks h3 {
     text-align: right; 
@@ -230,13 +305,10 @@ h2 {
     text-align: center;
     line-height: 40px;
     color: #fff;
-    background-color: #8e8e8e;
-/**/
     background: -webkit-linear-gradient(#a9a9a9, #909090, #666);
     -webkit-background-clip: background;
     -moz-background-clip: background;
     background-clip: backgroundt;
-/**/
     height: 40px;
     width: 180px;
     left: 0;
@@ -257,15 +329,69 @@ h2 {
 	background: #393939;
 	position: relative;
     color: #c3c3c3; 
-    padding-top: 40px;
+    padding-top: 30px;
 }
 .footer h3, .footer h2 {
     color: #dbdbdb;
+    margin: 10px 0; 
 }
 .footer div {
     display: inline-block;
     vertical-align: top;
 }
+
+.footer .social-links {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-bottom: 24px;
+    margin-right: 24px;
+
+}
+.footer .social-links .link-list {
+    /*white-space: nowrap;*/
+    font-size: 0;
+    margin: 10px 0 0 0;
+}
+.footer .link-list .social-link {
+    display: inline-block;
+    width: 44px;
+    height: 44px; 
+    vertical-align: top;
+    margin: 0 10px 0 0;
+    background: url(../images/social-icons.png) no-repeat;
+}
+
+.footer .link-list .social-links a{
+    display: block;
+    text-indent: 100%;
+    overflow: hidden;
+}
+.footer .link-list .email {
+    background-position: 0 0;
+}
+.footer .link-list .twitter {
+    background-position: 0 -44px;
+}
+.footer .link-list .facebook {
+    background-position: 0 -88px;
+}
+.footer .link-list .linkedin {
+    background-position: 0 bottom;
+}
+.footer .link-list .email:hover {
+    background-position: right 0;
+}
+.footer .link-list .twitter:hover {
+    background-position: right -44px;
+}
+.footer .link-list .facebook:hover {
+    background-position: right -88px;
+}
+.footer .link-list .linkedin:hover {
+    background-position: right bottom;
+}
+/* Footer Subscription
+-----------------------------------------------------------------------------*/
 .footer .subscription .subscribe-form {
     display: block;
 }
