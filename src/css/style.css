@@ -27,7 +27,7 @@ html {
 	height: 100%;
 }
 body {
-    font-size: 12px;
+    font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
 	width: 100%;
 	height: 100%;
@@ -40,6 +40,7 @@ body {
 	display: block;
     max-width: 1000px;
     margin: 0 20px;
+	text-align: center;
 }
 a {
     text-decoration: none;
@@ -51,18 +52,6 @@ ul {
 ul, h1, h2, h3 {
     margin: 0 auto;
 }
-h1 {
-    font-size: 28px;
-    padding-left: 32px;
-    /*gradient and shadow*/
-    background: -webkit-linear-gradient(#b37059, #522f21);
-    -webkit-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    text-shadow: hsla(17, 39%, 55%, 0.4) 1px 2px 2px;
-
-}
 h2 {
     font-size: 22px;
 }
@@ -72,6 +61,8 @@ h2 {
 		margin-left: auto;
 	}
 }
+/* Wraper
+-----------------------------------------------------------------------------*/
 /* Header
 -----------------------------------------------------------------------------*/
 .header {
@@ -79,31 +70,30 @@ h2 {
     padding: 8px 0;
 	background-image: url(../images/header-background.png);
 }
-/*.mainmenu {
+/*.main-menu {
 }*/
 
-.mainmenu .menu-list {
+.main-menu .menu-list {
     text-align: center;
     padding: 0;
 }
-.mainmenu  .menu-item{
+.main-menu  .menu-item{
 	display: inline-block; 
     vertical-align: top;   
 }
-.mainmenu .menu-list .menu-item a {
+.main-menu .menu-list .menu-item a {
     color: #cdcdcd; 
     box-sizing: border-box;
     display: block;
-    height: 20px;
-    border-radius: 10px;
-    padding: 2px 15px;
+    height: 1.5em;
+    border-radius: 1em;
+    padding: 0.2em 1em;
 }
-.mainmenu .menu-list .menu-item a:hover {
+.main-menu .menu-list .menu-item a:hover, .main-menu .menu-list .menu-item.active a {
     color: #1c2023;
     background-color: #dbdbdb;
 }
-
-/* Wraper
+/* Content
 -----------------------------------------------------------------------------*/
 .content {
 	padding: 0;
@@ -113,38 +103,76 @@ h2 {
 -----------------------------------------------------------------------------*/
 .schedule-planner {
     background-image: url(../images/shedule-planner-background.png);
+    padding-top: 30px;
+}
+.schedule-planner div {
+    margin: auto;
     position: relative;
-    padding-top: 20px;
     text-align: center;
 }
 
-.schedule-planner .logo {
-    width: 60px;
-    height: 42px;
+h1 {
+    font-size: 28px;
+    color: #983904;
+    /*gradient and shadow*/
+    background: -webkit-linear-gradient(#b37059, #522f21);
+    /*background: -webkit-linear-gradient(#b37059, #522f21);*/
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    text-shadow: 0px 1px 0px rgba(141, 50, 0, 0.61), 0px 1px 0px rgba(255, 255, 255, 0);
+    /*text-shadow: hsla(17, 39%, 55%, 0.4) 1px 2px 2px;*/
+    text-align: center;
+    display: inline-block;
 }
-.schedule-planner img {
-    position: absolute;
-}
-.schedule-planner .logo img {
-    height: inherit;
+.schedule-planner h1 .logo {
     width: auto;
-    top: 15px;
-    left: 10px;
+    height: 50px;
+    margin-right: 10px;
 }
 .schedule-planner .badge-img {
     width: 66px;
     height: 66px;
+    position: absolute;
+    display: none;
+    margin-top: -33px;
+    top: 0;
+    right: 0;
 }
 .schedule-planner .badge-img img {
     width: auto;
     height: inherit;
-    top: 0;
-    right: 0;
+}
+@media screen and (min-width: 420px) {
+    h1{
+        font-size: 34px;
+    }
+}
+@media screen and (min-width: 750px){
+    .schedule-planner .badge-img {
+        display: inline-block;
+        height: 70px;
+        width: 70px;
+        top: 0;
+        right: 60px;
+    }
+    .schedule-planner h1 {
+        font-size: 50px;
+    }
+    .schedule-planner h1 .logo {
+        width: 80px;
+        height: auto;
+    }
+    
+}
+.application-integration div {
+    margin: auto;
 }
 .platforms .platforms-menu {
     display: block;
     margin: 0;
-    padding:50px 0;
+    padding:50px 0 50px;
 }
 .platforms .platforms-menu .menu-item {
     display: inline-block;
@@ -222,6 +250,7 @@ h2 {
     max-width: 420px;
     display: inline-block;
     vertical-align: top;
+    margin: 0 2% 0 0;
 }
 .integration picture {
     height: 72px;
@@ -294,12 +323,6 @@ h2 {
 }
 .feedbacks .feedback {
     display: block;
-    /*1000px viewport
-    display: inline-block;
-    max-width: 280px;
-    vertical-align: top;
-    margin-right: 40px; 
-    */
 }
 .feedbacks h3 {
     text-align: right; 
@@ -435,6 +458,7 @@ h2 {
 	border-radius: 3px;
 	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.25);
 	color: #eaeaea;
+    font-size: 11px;
 }
 .copyright {
     width: 100%;
@@ -453,13 +477,15 @@ h2 {
     }
 }
 @media only screen and (min-width: 800px){
-    .content-wrapper
-    {
-        margin-left: 20px;
+    .footer{
+        text-align: center;
     }
 }
 @media only screen and (min-width: 1000px) {
     h1 {
         font-size: 65px;
+    }
+    .footer .content-wrapper form{
+       display: inline-block;
     }
 }
