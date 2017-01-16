@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link href="css/style.css" rel="stylesheet">
     <link rel="stylesheet" href="css/media.css">
+    <link rel="stylesheet" href="css/swiper.css">
+    <!--<link rel="stylesheet" href="css/swiper.min.css">-->
 </head>
 
 <body>
@@ -44,7 +46,26 @@
                         </ul>
                     </nav>
                 </div>
-                <div class="slider"></div>
+                <!-- Slider main container -->
+                <div class="swiper-container">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide"><img src="gallery/sp_android_tablet1.png"></div>
+                        <div class="swiper-slide"><img src="gallery/sp_android_tablet2.png"></div>
+                        <div class="swiper-slide"><img src="gallery/sp_android_tablet3.png"></div>
+                        <div class="swiper-slide"><img src="gallery/sp_ipad1.png"></div>
+                        <div class="swiper-slide"><img src="gallery/sp_ipad2.png"></div>
+                        <div class="swiper-slide"><img src="gallery/sp_ipad3.png"></div>
+                        
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+
+                    <!-- If we need navigation buttons -->
+                    <div class="swiper-button-prev swiper-button-black"></div>
+                    <div class="swiper-button-next swiper-button-black"></div>
+                </div>
             </section>
             <section class="application-integration">
                 <div class="content-wrapper">
@@ -158,7 +179,17 @@
         <div class="copyright">&copy; INTERSOG 2005-2012</div>
     </footer>
     <!-- .footer -->
-
+    <script src="js/swiper.min.js"></script>
+    <script>        
+        var mySwiper = new Swiper('.swiper-container', {
+            loop: true,
+            pagination: '.swiper-pagination',
+            nextButton: '.swiper-button-next',
+            prevButton: '.swiper-button-prev',
+            paginationClickable: true,
+            spaceBetween: 50
+        });    
+    </script>
 </body>
 
 </html>
