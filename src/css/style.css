@@ -34,6 +34,7 @@ body {
 }
 .wrapper {
 	margin: 0 auto;
+    min-width: 320px;
 }
 .content-wrapper {
 	width: auto;
@@ -55,12 +56,7 @@ ul, h1, h2, h3 {
 h2 {
     font-size: 22px;
 }
-@media (min-width: 1000px) {
-	.content-wrapper {
-		margin-right: auto;
-		margin-left: auto;
-	}
-}
+
 /* Wraper
 -----------------------------------------------------------------------------*/
 /* Header
@@ -103,12 +99,14 @@ h2 {
 -----------------------------------------------------------------------------*/
 .schedule-planner {
     background-image: url(../images/shedule-planner-background.png);
-    padding-top: 30px;
 }
-.schedule-planner div {
+.schedule-planner div.content-wrapper {
     margin: auto;
     position: relative;
-    text-align: center;
+    padding-top: 30px;
+    background-position: center -100px!important;
+    background: -webkit-radial-gradient(center, ellipse cover, rgba(241,241,241,1) 0%,rgba(241,241,241,0) 70%);
+    background-repeat: no-repeat;
 }
 
 h1 {
@@ -116,7 +114,7 @@ h1 {
     color: #983904;
     /*gradient and shadow*/
     background: -webkit-linear-gradient(#b37059, #522f21);
-    /*background: -webkit-linear-gradient(#b37059, #522f21);*/
+    /*! background: -webkit-linear-gradient(#b37059, #522f21); */
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -130,12 +128,12 @@ h1 {
     width: auto;
     height: 50px;
     margin-right: 10px;
+    vertical-align: bottom;
 }
 .schedule-planner .badge-img {
     width: 66px;
     height: 66px;
     position: absolute;
-    display: none;
     margin-top: -33px;
     top: 0;
     right: 0;
@@ -143,32 +141,9 @@ h1 {
 .schedule-planner .badge-img img {
     width: auto;
     height: inherit;
+    visibility: hidden;
 }
-@media screen and (min-width: 420px) {
-    h1{
-        font-size: 34px;
-    }
-}
-@media screen and (min-width: 750px){
-    .schedule-planner .badge-img {
-        display: inline-block;
-        height: 70px;
-        width: 70px;
-        top: 0;
-        right: 60px;
-    }
-    .schedule-planner h1 {
-        font-size: 50px;
-    }
-    .schedule-planner h1 .logo {
-        width: 80px;
-        height: auto;
-    }
-    
-}
-.application-integration div {
-    margin: auto;
-}
+
 .platforms .platforms-menu {
     display: block;
     margin: 0;
@@ -238,8 +213,14 @@ h1 {
 /* Application integration
 -----------------------------------------------------------------------------*/
 .application-integration {
-    background-color: #f8f7f3;
-    padding: 20px 0;
+    background: #f8f7f3 url(../images/features-top-line.png) repeat-x left -10px;
+    padding: 20px 0 1px;
+}
+
+.application-integration div {
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
 }
 
 .application-integration h2 {
@@ -247,10 +228,11 @@ h1 {
 }
 .integration {
     position: relative;
-    max-width: 420px;
+    max-width: 90%;
     display: inline-block;
     vertical-align: top;
     margin: 0 2% 0 0;
+    text-align: left;
 }
 .integration picture {
     height: 72px;
@@ -276,8 +258,7 @@ h1 {
 .features {
     background-image: url(../images/features-background.png);
     color: #fff;
-    font-size: 20px;;
-    padding: 22px 0;
+    font-size: 20px;
 }
 .features .features-list {
     display: block;
@@ -286,20 +267,12 @@ h1 {
     display: inline-block;
     height: 63px;
     padding: 0 0 0 86px;
-    margin: 0 0 22px;
+    margin: 22px 0;
     background: no-repeat 0 center;
+    vertical-align: top;
+    text-align: left;
 }
-.features .features-list li:last-child {
-    margin-bottom: 0;
-}
-/*----media----*/
-@media only screen and (min-width: 600px) {
-    .features .features-list li {
-        width: 310px;
-    }
 
-}
-/*----media----*/
 .features .features-list .security {
     background-image: url(../images/password.png);
 }
@@ -316,18 +289,21 @@ h1 {
 /* Feedback 
 -----------------------------------------------------------------------------*/
 .feedbacks {
-    background-color: #f8f7f3;
+    background: #f8f7f3;
     position: relative;
     font-size: 16px;
     padding: 20px 0;
 }
 .feedbacks .feedback {
     display: block;
+    text-align: left;
 }
-.feedbacks h3 {
+.feedbacks a {
+    display: block;
     text-align: right; 
-    margin-bottom: 20px;
+    margin-top: 10px;
     color: #8f4f35;
+    font-weight: bold;
 }
 .feedbacks .read-more-link {
     position: absolute;
@@ -345,41 +321,26 @@ h1 {
     right: 0;
     bottom: 0;
     margin: auto;
-    margin-bottom: -20px;
+    margin-bottom: -22px;
     z-index: 2;
     white-space: nowrap;
     border: 2px solid #fff;
     border-radius: 30px; 
 }
-/*----media----*/
-@media only screen and (min-width: 800px){
-    .feedbacks .feedback {
-    display: inline-block;
-    max-width: 180px;
-    vertical-align: top;
-    margin-right: 40px; 
-    
-}
-}
-@media only screen and (min-width: 920px){
-    .feedbacks .feedback {
-    max-width: 280px;
-    
-}
-}
-/*----media----*/
+
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
 	margin: 0 auto;
-	background: #393939;
+	background: #393939  url(../images/feedback-bottom-line.png) repeat-x left -3px;
 	position: relative;
     color: #c3c3c3; 
-    padding-top: 30px;
+    padding-top: 50px;
 }
 .footer h3, .footer h2 {
     color: #dbdbdb;
     margin: 10px 0; 
+    text-align: left;
 }
 .footer div {
     display: inline-block;
@@ -405,6 +366,7 @@ h1 {
     vertical-align: top;
     margin: 0 10px 0 0;
     background: url(../images/social-icons.png) no-repeat;
+    cursor: pointer;
 }
 
 .footer .link-list .social-links a{
@@ -438,27 +400,44 @@ h1 {
 }
 /* Footer Subscription
 -----------------------------------------------------------------------------*/
+
 .footer .subscription .subscribe-form {
     display: block;
+    height: 48px;
+    text-align: left;
 }
-.footer .subscription .subscribe-form .label {
+.footer .subscription .label {
     display: block;
+    font-size: 12px;
     margin-bottom: 5px; 
+    text-align: left;
 }
 .footer .subscription .subscribe-form .mail-text {
     background-color: #0d0d0d;
     border: none;
-    height: 24px;
-    width: 134px;
+    height: 26px;
+    width: 150px;
 }
 .footer .subscription .subscribe-form .button-subscribe {
     height: 26px;
+    width: 68px;
     border: 1px solid #1f1f1f;
-	background: #20669b;
+    background-color: #21689d;
+	background: -webkit-linear-gradient(#21689d, #184d73);
 	border-radius: 3px;
 	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.25);
 	color: #eaeaea;
-    font-size: 11px;
+    font-size: 12px;
+    cursor: pointer;
+}
+.footer .partners {
+    text-align: left;
+    margin-left: 20px;
+}
+.footer .partners-links .link{
+    display: inline-block;
+    margin-right: 10px;
+    margin-bottom: 20px;
 }
 .copyright {
     width: 100%;
@@ -468,24 +447,3 @@ h1 {
     padding: 5px 0 11px 0;
 }
 
-/* Media
------------------------------------------------------------------------------*/
-
-@media (min-width: 300px){
-    .badge-img{
-        display: none;
-    }
-}
-@media only screen and (min-width: 800px){
-    .footer{
-        text-align: center;
-    }
-}
-@media only screen and (min-width: 1000px) {
-    h1 {
-        font-size: 65px;
-    }
-    .footer .content-wrapper form{
-       display: inline-block;
-    }
-}
