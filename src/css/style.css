@@ -265,6 +265,7 @@ h1 {
 }
 .features .features-list li {
     display: inline-block;
+    width: 300px;
     height: 63px;
     padding: 0 0 0 86px;
     margin: 22px 0;

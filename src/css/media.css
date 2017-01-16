@@ -42,6 +42,9 @@
         
     max-width: 320px;
     }
+    .features .features-list li {
+        width: 250px;
+    }
 }
 @media only screen and (min-width: 800px){
     h1 {
