@@ -29,19 +29,19 @@ html {
 body {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
-	width: 100%;
-	height: 100%;
+    width: 100%;
+    height: 100%;
 }
 .wrapper {
-	margin: 0 auto;
+    margin: 0 auto;
     min-width: 320px;
 }
 .content-wrapper {
-	width: auto;
-	display: block;
+    width: auto;
+    display: block;
     max-width: 1000px;
     margin: 0 20px;
-	text-align: center;
+    text-align: center;
 }
 a {
     text-decoration: none;
@@ -64,17 +64,15 @@ h2 {
 .header {
     width: auto;
     padding: 8px 0;
-	background-image: url(../images/header-background.png);
+    background-image: url(../images/header-background.png);
 }
-/*.main-menu {
-}*/
 
 .main-menu .menu-list {
     text-align: center;
     padding: 0;
 }
 .main-menu  .menu-item{
-	display: inline-block; 
+    display: inline-block; 
     vertical-align: top;   
 }
 .main-menu .menu-list .menu-item a {
@@ -92,7 +90,7 @@ h2 {
 /* Content
 -----------------------------------------------------------------------------*/
 .content {
-	padding: 0;
+    padding: 0;
     color: #3e3e3e;
 }
 /* Schedule planner
@@ -100,7 +98,7 @@ h2 {
 .schedule-planner {
     background-image: url(../images/shedule-planner-background.png);
 }
-.schedule-planner div.content-wrapper {
+.schedule-planner .content-wrapper {
     margin: auto;
     position: relative;
     padding-top: 30px;
@@ -111,16 +109,15 @@ h2 {
 
 h1 {
     font-size: 28px;
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
     color: #983904;
     /*gradient and shadow*/
     background: -webkit-linear-gradient(#b37059, #522f21);
-    /*! background: -webkit-linear-gradient(#b37059, #522f21); */
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    text-shadow: 0px 1px 0px rgba(141, 50, 0, 0.61), 0px 1px 0px rgba(255, 255, 255, 0);
-    /*text-shadow: hsla(17, 39%, 55%, 0.4) 1px 2px 2px;*/
+    text-shadow: inset 0px 1px 0px rgba(141, 50, 0, 0.61), 0px 1px 0px rgba(255, 255, 255, 0);
     text-align: center;
     display: inline-block;
 }
@@ -150,6 +147,7 @@ h1 {
     padding:50px 0 50px;
 }
 .platforms .platforms-menu .menu-item {
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
     display: inline-block;
     vertical-align: top;
     padding: 0 10% 0 0;
@@ -169,17 +167,17 @@ h1 {
 .platforms .platforms-menu a::before {
     content: "";
     position: absolute;
-	top: 0;
-	left: 0;
-	margin-left: 50%;
-	transform: translateX(-50%);
-	background: url(../images/bg_platforms.png) no-repeat;
+    top: 0;
+    left: 0;
+    margin-left: 50%;
+    transform: translateX(-50%);
+    background: url(../images/bg_platforms.png) no-repeat;
 }
 
 .platforms .platforms-menu .iphone  a::before  {
     width: 25px;
-	height: 42px;
-	background-position: -29px 0;
+    height: 42px;
+    background-position: -29px 0;
 }
 .platforms .platforms-menu .iphone a:hover::before{
     background-position: -108px 0; 
@@ -238,12 +236,6 @@ h1 {
     padding: 20px 0 1px;
 }
 
-.application-integration div {
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px;
-}
-
 .application-integration h2 {
     color: #915542;
 }
@@ -252,7 +244,7 @@ h1 {
     max-width: 90%;
     display: inline-block;
     vertical-align: top;
-    margin: 0 2% 0 0;
+    margin: 0 2% 20px 0;
     text-align: left;
 }
 .integration picture {
@@ -330,6 +322,7 @@ h1 {
 .feedbacks .read-more-link {
     position: absolute;
     font-size: 18px;
+    text-shadow: 0 1px 0 rgb(72, 72, 72);
     text-align: center;
     line-height: 40px;
     color: #fff;
@@ -337,6 +330,7 @@ h1 {
     -webkit-background-clip: background;
     -moz-background-clip: background;
     background-clip: backgroundt;
+    box-shadow: 0 1px 0 rgb(13,13,13);
     height: 40px;
     width: 180px;
     left: 0;
@@ -353,10 +347,10 @@ h1 {
 /* Footer
 -----------------------------------------------------------------------------*/
 .footer {
-	margin: 0 auto;
-	background: #393939  url(../images/feedback-bottom-line.png) repeat-x left -3px;
-	position: relative;
-    color: #c3c3c3; 
+    margin: 0 auto;
+    background: #393939  url(../images/feedback-bottom-line.png) repeat-x left -3px;
+    position: relative;
+    color: #c3c3c3;
     padding-top: 50px;
 }
 .footer h3, .footer h2 {
@@ -364,7 +358,7 @@ h1 {
     margin: 10px 0; 
     text-align: left;
 }
-.footer div {
+.footer .content-wrapper, .footer .partners{
     display: inline-block;
     vertical-align: top;
 }
@@ -377,7 +371,6 @@ h1 {
 
 }
 .footer .social-links .link-list {
-    /*white-space: nowrap;*/
     font-size: 0;
     margin: 10px 0 0 0;
 }
@@ -426,6 +419,7 @@ h1 {
 .footer .subscription .subscribe-form {
     display: block;
     height: 48px;
+    font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
     text-align: left;
 }
 .footer .subscription .label {
@@ -445,10 +439,10 @@ h1 {
     width: 68px;
     border: 1px solid #1f1f1f;
     background-color: #21689d;
-	background: -webkit-linear-gradient(#21689d, #184d73);
-	border-radius: 3px;
-	box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.25);
-	color: #eaeaea;
+    background: -webkit-linear-gradient(#21689d, #184d73);
+    border-radius: 3px;
+    box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.25);
+    color: #eaeaea;
     font-size: 12px;
     cursor: pointer;
 }

@@ -8,7 +8,7 @@
 }
 @media only screen and (min-width: 600px) {
     h1{
-        font-size: 40px;
+        font-size: 44px;
     }
     
     .features .features-list li {
@@ -23,7 +23,7 @@
 
 @media screen and (min-width: 750px){
     h1 {
-        font-size: 45px;
+        font-size: 50px;
     }
      .schedule-planner h1 .logo {
         width: 86px;
@@ -48,7 +48,7 @@
 }
 @media only screen and (min-width: 800px){
     h1 {
-        font-size: 56px;
+        font-size: 65px;
     }
      .schedule-planner h1 .logo {
         width: 90px;
@@ -57,8 +57,8 @@
     .schedule-planner .badge-img {
         height: 80px;
         width: 80px;
-        top: 14px;
-        right: 62px;
+        top: 20px;
+        right: 46px;
     }
     .integration picture{
         height: 80px;
@@ -79,12 +79,12 @@
 }
 @media only screen and (min-width: 850px){
     .schedule-planner .badge-img {
-        right: 80px;
+        right: 100px;
     }
 }
 @media only screen and (min-width: 920px){
     .schedule-planner .badge-img {
-        right: 118px;
+        right: 136px;
     }
     .integration {
         max-width: 420px;
@@ -96,7 +96,7 @@
 }
 @media only screen and (min-width: 980px) {
     h1 {
-        font-size: 70px;
+        font-size: 76px;
     }
      .schedule-planner h1 .logo {
         width: 110px;
