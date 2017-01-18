@@ -59,8 +59,7 @@
     }
    
     .integration {
-        
-    max-width: 320px;
+	max-width: 320px;
     }
     .features .features-list li {
         width: 250px;
@@ -86,10 +85,10 @@
         width: 80px;
     }
     .feedbacks .feedback {
-    display: inline-block;
-    max-width: 180px;
-    vertical-align: top;
-    margin-right: 40px;     
+        display: inline-block;
+        max-width: 180px;
+        vertical-align: top;
+        margin-right: 40px;     
     }
     .feedbacks .feedback:last-of-type{
         margin-right: 0px;
@@ -123,10 +122,9 @@
         height: 114px;
         background-size: 114px;
     }
-    
-	.content-wrapper {
-		margin-right: auto;
-		margin-left: auto;
+    .content-wrapper {
+	margin-right: auto;
+	margin-left: auto;
     }
     .feedbacks .feedback {
         max-width: 280px;
