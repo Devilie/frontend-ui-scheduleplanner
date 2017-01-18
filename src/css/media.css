@@ -2,15 +2,36 @@
 -----------------------------------------------------------------------------*/
 
 @media screen and (min-width: 420px) {
-    h1{
+    .schedule-planner .logo-container h1{
         font-size: 34px;
+    }
+    .schedule-planner .logo-container h1::after{
+        margin-top: -48px;
+        margin-right: -48px;
+        width: 70px;
+        height: 70px;
+        background-size: 70px;
+    }
+    .schedule-planner .logo-container .logo {
+        width: 60px;
+        height: auto;
     }
 }
 @media only screen and (min-width: 600px) {
-    h1{
+    .schedule-planner .logo-container h1{
         font-size: 44px;
     }
-    
+    .schedule-planner .logo-container h1::after{
+        margin-top: -56px;
+        margin-right: -60px;
+        width: 86px;
+        height: 86px;
+        background-size: 86px;
+    }
+    .schedule-planner .logo-container .logo{
+        width: 70px;
+        height: auto;
+    }
     .features .features-list li {
         width: 400px;
     }
@@ -22,22 +43,21 @@
 }
 
 @media screen and (min-width: 750px){
-    h1 {
+    .schedule-planner .logo-container h1 {
         font-size: 50px;
     }
-     .schedule-planner h1 .logo {
-        width: 86px;
+    .schedule-planner .logo-container h1::after{
+        margin-top: -50px;
+        margin-right: -56px;
+        width: 80px;
+        height: 80px;
+        background-size: 80px;
+    }
+    .schedule-planner .logo-container .logo {
+        width: 80px;
         height: auto;
     }
-    .schedule-planner .badge-img img {
-        visibility: visible;
-    }
-    .schedule-planner .badge-img {
-        height: 70px;
-        width: 70px;
-        top: 30px;
-        right: 90px;
-    }
+   
     .integration {
         
     max-width: 320px;
@@ -47,18 +67,19 @@
     }
 }
 @media only screen and (min-width: 800px){
-    h1 {
+    .schedule-planner .logo-container h1 {
         font-size: 65px;
     }
-     .schedule-planner h1 .logo {
+    .schedule-planner .logo-container h1::after{
+        margin-top: -50px;
+        margin-right: -64px;
+        width: 92px;
+        height: 92px;
+        background-size: 92px;
+    }
+    .schedule-planner .logo-container .logo {
         width: 90px;
         height: auto;
-    }
-    .schedule-planner .badge-img {
-        height: 80px;
-        width: 80px;
-        top: 20px;
-        right: 46px;
     }
     .integration picture{
         height: 80px;
@@ -77,15 +98,7 @@
         text-align: center;
     }
 }
-@media only screen and (min-width: 850px){
-    .schedule-planner .badge-img {
-        right: 100px;
-    }
-}
 @media only screen and (min-width: 920px){
-    .schedule-planner .badge-img {
-        right: 136px;
-    }
     .integration {
         max-width: 420px;
     }
@@ -95,30 +108,34 @@
     
 }
 @media only screen and (min-width: 980px) {
-    h1 {
+    .schedule-planner .logo-container h1 {
         font-size: 76px;
     }
-     .schedule-planner h1 .logo {
+     
+    .schedule-planner .logo-container .logo {
         width: 110px;
         height: auto;
     }
-    .schedule-planner .badge-img {
-        height: 90px;
-        width: 90px;
-        right: 80px;
+    .schedule-planner .logo-container h1::after{
+        margin-top: -66px;
+        margin-right: -70px;
+        width: 114px;
+        height: 114px;
+        background-size: 114px;
     }
+    
 	.content-wrapper {
 		margin-right: auto;
 		margin-left: auto;
     }
     .feedbacks .feedback {
-    max-width: 280px;
+        max-width: 280px;
     }
     .footer .content-wrapper {
         margin-right: 60px;
     }
     .footer .content-wrapper form{
-       display: inline-block;
+        display: inline-block;
     }
 
 }

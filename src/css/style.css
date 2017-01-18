@@ -107,7 +107,7 @@ h2 {
     background-repeat: no-repeat;
 }
 
-h1 {
+.schedule-planner .logo-container h1 {
     font-size: 28px;
     font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
     color: #983904;
@@ -117,29 +117,32 @@ h1 {
     -webkit-background-clip: text;
     -moz-background-clip: text;
     background-clip: text;
-    text-shadow: inset 0px 1px 0px rgba(141, 50, 0, 0.61), 0px 1px 0px rgba(255, 255, 255, 0);
+    text-shadow: 0px -1px 0px rgba(141, 50, 0, 0.4), 0px 1px 0px rgba(255, 255, 255, 0);
     text-align: center;
     display: inline-block;
+    position: relative;
 }
-.schedule-planner h1 .logo {
-    width: auto;
-    height: 50px;
+
+.schedule-planner .logo-container .logo {
+    width: 46px;
+    height: auto;
     margin-right: 10px;
     vertical-align: bottom;
 }
-.schedule-planner .badge-img {
-    width: 66px;
-    height: 66px;
+/*badge as pseudo-element*/
+.schedule-planner .logo-container h1::after{
+    content: "";
     position: absolute;
-    margin-top: -33px;
     top: 0;
     right: 0;
+    margin-top: -34px;
+    margin-right: -34px;
+    width: 52px;
+    height: 52px;
+    background-image: url(../images/badge.png);
+    background-size: 52px;
 }
-.schedule-planner .badge-img img {
-    width: auto;
-    height: inherit;
-    visibility: hidden;
-}
+/**/
 
 .platforms .platforms-menu {
     display: block;
