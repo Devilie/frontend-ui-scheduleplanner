@@ -26,17 +26,16 @@
 html {
 	height: 100%;
 }
+
 body {
     font-size: 14px;
     font-family: Arial, Helvetica, sans-serif;
     width: 100%;
     height: 100%;
-    overflow-x: hidden;
 }
 .wrapper {
     margin: 0 auto;
     min-width: 320px;
-    /*! overflow: hidden; */
 }
 .content-wrapper {
     width: auto;
@@ -44,6 +43,7 @@ body {
     max-width: 1000px;
     margin: 0 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 a {
     text-decoration: none;
@@ -109,6 +109,9 @@ h2 {
     background-repeat: no-repeat;
 }
 
+.schedule-planner .logo-container {
+    box-sizing: border-box;
+}
 .schedule-planner .logo-container h1 {
     font-size: 28px;
     font-family: "Myriad Pro", Arial, Helvetica, sans-serif;
@@ -123,12 +126,12 @@ h2 {
     text-align: center;
     display: inline-block;
     position: relative;
+    margin-left: 10px;
 }
 
 .schedule-planner .logo-container .logo {
     width: 46px;
     height: auto;
-    margin-right: 10px;
     vertical-align: bottom;
 }
 /*badge as pseudo-element*/
@@ -137,12 +140,8 @@ h2 {
     position: absolute;
     top: 0;
     right: 0;
-    margin-top: -34px;
-    margin-right: -34px;
-    width: 52px;
-    height: 52px;
     background-image: url(../images/badge.png);
-    background-size: 52px;
+    visibility: hidden;
 }
 
 .platforms .platforms-menu {
@@ -289,6 +288,7 @@ h2 {
     background: no-repeat 0 center;
     vertical-align: top;
     text-align: left;
+    box-sizing: border-box;
 }
 
 .features .features-list .security {
@@ -334,7 +334,7 @@ h2 {
     -webkit-background-clip: background;
     -moz-background-clip: background;
     background-clip: backgroundt;
-    box-shadow: 0 1px 0 rgb(13,13,13);
+    box-shadow: 0 1px 1px rgb(13,13,13), 0px -1px 1px 0px rgba(13, 13, 13, 0.1);
     height: 40px;
     width: 180px;
     left: 0;

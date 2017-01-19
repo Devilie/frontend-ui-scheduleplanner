@@ -1,13 +1,14 @@
 /* Media
 -----------------------------------------------------------------------------*/
 
-@media screen and (min-width: 420px) {
+@media screen and (min-width: 430px) {
     .schedule-planner .logo-container h1{
         font-size: 34px;
     }
     .schedule-planner .logo-container h1::after{
+        visibility: visible;
         margin-top: -48px;
-        margin-right: -48px;
+        margin-right: -46px;
         width: 70px;
         height: 70px;
         background-size: 70px;
@@ -33,7 +34,7 @@
         height: auto;
     }
     .features .features-list li {
-        width: 400px;
+        width: 440px;
     }
     .integration picture{
         height: 76px;
@@ -63,7 +64,7 @@
     max-width: 320px;
     }
     .features .features-list li {
-        width: 250px;
+        width: 300px;
     }
 }
 @media only screen and (min-width: 800px){
@@ -103,7 +104,7 @@
         max-width: 420px;
     }
     .features .features-list li{
-        width: 320px;
+        width: 420px;
     }
     
 }
